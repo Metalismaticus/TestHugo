@@ -1,0 +1,5 @@
+languageCode = "ru-ru"
+title = "Vintage Story сервер TOPS"
+theme = "vintagestory"
+publishDir = "docs"
+baseURL = "https://metalismaticus.github.io/TestHugo/"
