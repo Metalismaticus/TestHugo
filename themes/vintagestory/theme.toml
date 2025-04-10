@@ -1,8 +1,0 @@
-name = "VintageStory"
-license = "MIT"
-licenselink = "https://opensource.org/licenses/MIT"
-description = "Custom theme for Vintage Story server"
-homepage = "https://github.com/yourname/vintagestory"
-tags = ["pixel", "game", "vintage", "custom"]
-features = ["responsive", "static"]
-min_version = "0.124.0"
