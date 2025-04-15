@@ -3,24 +3,69 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/agrabah/</loc>
+  </url>
+  <url>
     <loc>https://metalismaticus.github.io/TestHugo/trade/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/bronze-city/</loc>
   </url>
   <url>
     <loc>https://metalismaticus.github.io/TestHugo/</loc>
   </url>
   <url>
-    <loc>https://metalismaticus.github.io/TestHugo/first_step/</loc>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/gondor/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/call_me/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/yellow-heights/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/events/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/kazakhstan/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/news/15.04.2025/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/laketown/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/milesville/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/sky-city/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/news/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/events/easter_2025/</loc>
   </url>
   <url>
     <loc>https://metalismaticus.github.io/TestHugo/comands/</loc>
   </url>
   <url>
+    <loc>https://metalismaticus.github.io/TestHugo/first_step/</loc>
+  </url>
+  <url>
     <loc>https://metalismaticus.github.io/TestHugo/mods/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/rule/</loc>
   </url>
   <url>
     <loc>https://metalismaticus.github.io/TestHugo/towns/</loc>
   </url>
   <url>
-    <loc>https://metalismaticus.github.io/TestHugo/call_me/</loc>
+    <loc>https://metalismaticus.github.io/TestHugo/turism/</loc>
+  </url>
+  <url>
+    <loc>https://metalismaticus.github.io/TestHugo/towns/erebor/</loc>
   </url>
 </urlset>
