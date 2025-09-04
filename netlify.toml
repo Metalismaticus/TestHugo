@@ -1,0 +1,22 @@
+[build]
+  command = "hugo"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.149.0"
+  HUGO_EXTENDED = "true"
+  NODE_VERSION = "20"
+
+# не трогаем YAML — отдать как есть
+[[redirects]]
+  from = "/admin/config.yml"
+  to = "/admin/config.yml"
+  status = 200
+  force = true
+
+# всё остальное внутри /admin на индекс админки
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+  force = true
