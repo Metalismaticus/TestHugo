@@ -1,21 +1,20 @@
-<nav class="ml-4 flex items-center gap-2 text-sm">
+{{ if .Site.IsMultiLingual }}
+<nav aria-label="Language switcher" class="ml-4 text-sm">
+  {{/* если у страницы есть переводы — показываем текущий и ссылки на переводы */}}
   {{ if gt (len .AllTranslations) 0 }}
-    {{ range sort .AllTranslations "Language.Weight" }}
-      <a href="{{ .RelPermalink }}" class="px-2 py-1 hover:underline">
-        {{ .Language.LanguageName }}
-      </a>
-    {{ end }}
     <span class="px-2 py-1 font-semibold">{{ .Site.Language.LanguageName }}</span>
+    {{ range sort .AllTranslations "Language.Weight" }}
+      <a class="px-2 py-1 hover:underline" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+    {{ end }}
   {{ else }}
-    {{ $cur := .Site.Language.Lang }}
+    {{/* пары нет — даём ссылки на домашние страницы каждого языка */}}
     {{ range .Sites }}
-      {{ if ne .Language.Lang $cur }}
-        <a href="{{ .Home.RelPermalink }}" class="px-2 py-1 hover:underline">
-          {{ .Language.LanguageName }}
-        </a>
-      {{ else }}
+      {{ if eq .Language.Lang $.Site.Language.Lang }}
         <span class="px-2 py-1 font-semibold">{{ .Language.LanguageName }}</span>
+      {{ else }}
+        <a class="px-2 py-1 hover:underline" href="{{ .Home.RelPermalink }}">{{ .Language.LanguageName }}</a>
       {{ end }}
     {{ end }}
   {{ end }}
 </nav>
+{{ end }}

@@ -7,7 +7,7 @@
             <nav class="flex items-center justify-between h-20">
                 <!-- Logo and Title -->
                 <a href="{{ .Site.BaseURL }}" class="flex items-center space-x-4">
-			{{ partial "lang-switcher.html" . }}
+
                     {{ with $headerConfig.logo }}
                         <img src="{{ .src | relURL }}" alt="{{ $.Site.Title }}" class="{{ with .class }}{{ . }}{{ else }}h-12{{ end }}">
                     {{ else }}
