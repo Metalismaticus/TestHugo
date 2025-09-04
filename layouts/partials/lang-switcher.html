@@ -1,15 +1,14 @@
-{{ if .Site.IsMultiLingual }}
+{{ if hugo.IsMultilingual }}
 <nav aria-label="Language switcher" class="ml-4 text-sm">
-  {{/* если у страницы есть переводы — показываем текущий и ссылки на переводы */}}
   {{ if gt (len .AllTranslations) 0 }}
     <span class="px-2 py-1 font-semibold">{{ .Site.Language.LanguageName }}</span>
     {{ range sort .AllTranslations "Language.Weight" }}
       <a class="px-2 py-1 hover:underline" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
     {{ end }}
   {{ else }}
-    {{/* пары нет — даём ссылки на домашние страницы каждого языка */}}
+    {{ $cur := .Site.Language.Lang }}
     {{ range .Sites }}
-      {{ if eq .Language.Lang $.Site.Language.Lang }}
+      {{ if eq .Language.Lang $cur }}
         <span class="px-2 py-1 font-semibold">{{ .Language.LanguageName }}</span>
       {{ else }}
         <a class="px-2 py-1 hover:underline" href="{{ .Home.RelPermalink }}">{{ .Language.LanguageName }}</a>
