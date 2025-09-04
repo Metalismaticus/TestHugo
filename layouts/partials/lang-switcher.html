@@ -1,0 +1,8 @@
+<nav class="ml-4 flex items-center gap-2 text-sm">
+  {{ range .AllTranslations }}
+    <a href="{{ .RelPermalink }}"
+       class="px-2 py-1 rounded hover:underline {{ if eq .Language.Lang $.Language.Lang }}font-semibold{{ end }}">
+       {{ .Language.LanguageName }}
+    </a>
+  {{ end }}
+</nav>
