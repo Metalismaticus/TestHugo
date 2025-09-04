@@ -12,8 +12,10 @@ collections:
       - file: "content/_index.md"
         label: Home
         name: home
+        preview_path: "/"
         fields:
           - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featured_image, widget: image, required: false }
           - { label: Body, name: body, widget: markdown }
 
   - name: blog
@@ -21,8 +23,10 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{slug}}"
+    preview_path: "blog/{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Date, name: date, widget: datetime }
       - { label: Draft, name: draft, widget: boolean, default: true }
+      - { label: Featured Image, name: featured_image, widget: image, required: false }
       - { label: Body, name: body, widget: markdown }
