@@ -1,8 +1,21 @@
 <nav class="ml-4 flex items-center gap-2 text-sm">
-  {{ range .AllTranslations }}
-    <a href="{{ .RelPermalink }}"
-       class="px-2 py-1 rounded hover:underline {{ if eq .Language.Lang $.Language.Lang }}font-semibold{{ end }}">
-       {{ .Language.LanguageName }}
-    </a>
+  {{ if gt (len .AllTranslations) 0 }}
+    {{ range sort .AllTranslations "Language.Weight" }}
+      <a href="{{ .RelPermalink }}" class="px-2 py-1 hover:underline">
+        {{ .Language.LanguageName }}
+      </a>
+    {{ end }}
+    <span class="px-2 py-1 font-semibold">{{ .Site.Language.LanguageName }}</span>
+  {{ else }}
+    {{ $cur := .Site.Language.Lang }}
+    {{ range .Sites }}
+      {{ if ne .Language.Lang $cur }}
+        <a href="{{ .Home.RelPermalink }}" class="px-2 py-1 hover:underline">
+          {{ .Language.LanguageName }}
+        </a>
+      {{ else }}
+        <span class="px-2 py-1 font-semibold">{{ .Language.LanguageName }}</span>
+      {{ end }}
+    {{ end }}
   {{ end }}
 </nav>
