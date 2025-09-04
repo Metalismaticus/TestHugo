@@ -1,6 +1,15 @@
+# netlify.toml (корень репо)
+
 [build]
   command = "hugo"
   publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.149.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "false"
+  HUGO_EXTENDED = "true"
+  NODE_VERSION = "20"
 
 [[redirects]]
   from = "/admin/*"
