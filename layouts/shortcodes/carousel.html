@@ -1,0 +1,67 @@
+{{/* Carousel v3: no visible scrollbars, clickable slides, custom captions.
+Usage:
+  {{< carousel items="1" height="500" unit="px" duration="7000" maxw="max-w-5xl" radius="rounded-2xl" >}}
+Data (data/carousel.yaml):
+  images:
+    - image: /uploads/slider/image1.jpg
+      caption_html: "Slide 1"
+      href: "/some/page/"
+      target: "_blank"
+Params:
+  items, height, unit, duration (ms)
+  maxw: tailwind max-width container class (default max-w-5xl)
+  radius: tailwind radius class (default rounded-xl)
+*/}}
+
+{{- $items := .Get "items" | default "1" -}}
+{{- $height := .Get "height" | default "500" -}}
+{{- $unit := .Get "unit" | default "px" -}}
+{{- $duration := .Get "duration" | default "7000" -}}
+{{- $maxw := .Get "maxw" | default "max-w-5xl" -}}
+{{- $radius := .Get "radius" | default "rounded-xl" -}}
+
+{{- if not (.Page.Scratch.Get "hc_carousel_included") -}}
+<link rel="stylesheet" href="{{ "css/carousel.css" | relURL }}">
+<script defer src="{{ "js/carousel.js" | relURL }}"></script>
+{{- .Page.Scratch.Set "hc_carousel_included" true -}}
+{{- end -}}
+
+{{- $slides := slice -}}
+{{- with site.Data.carousel -}}
+  {{- with .images -}}
+    {{- range . -}}{{- $slides = $slides | append . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $inner := .Inner | default "" -}}
+
+<div class="hc-slider w-full {{ $maxw }} mx-auto {{ $radius }} overflow-hidden" data-items="{{ $items }}" data-duration="{{ $duration }}">
+  <div class="hc-viewport" style="height: {{ $height }}{{ $unit }};">
+    <div class="hc-track">
+      {{- if gt (len $slides) 0 -}}
+        {{- range $i, $s := $slides -}}
+          {{- $cap := or $s.caption_html $s.content_html -}}
+          {{- $href := or $s.href $s.link -}}
+          <div class="hc-slide">
+            {{- if $href -}}<a href="{{ $href | relURL }}" {{ with $s.target }}target="{{ . }}" rel="noopener"{{ end }} class="block w-full h-full relative">{{- end -}}
+              <img src="{{ $s.image | relURL }}" alt="slide {{ add $i 1 }}" loading="lazy">
+              {{- with $cap -}}
+              <div class="hc-caption">{{ . | safeHTML }}</div>
+              {{- end -}}
+            {{- if $href -}}</a>{{- end -}}
+          </div>
+        {{- end -}}
+      {{- else -}}
+        {{- $parts := split $inner "<hr>" -}}
+        {{- range $i, $p := $parts -}}
+          <div class="hc-slide">
+            <div class="hc-caption">{{ $p | safeHTML }}</div>
+          </div>
+        {{- end -}}
+      {{- end -}}
+    </div>
+    <button class="hc-arrow hc-prev" aria-label="Previous">‹</button>
+    <button class="hc-arrow hc-next" aria-label="Next">›</button>
+    <div class="hc-bullets"></div>
+  </div>
+</div>

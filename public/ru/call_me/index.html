@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="ru">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Дополнить информацию на сайте · TOPS GUIDE</title><link rel="stylesheet" href="/css/main.css" /><style>
+    :root{ --bg-url: url("/images/vs-tavern.jpg"); }
+    html,body{ height:100%; }
+    .site-bg{
+      position:fixed; inset:0; z-index:-1;
+      background: linear-gradient(rgba(10,12,16,.72), rgba(10,12,16,.72)), var(--bg-url);
+      background-size:cover; background-position:center; background-attachment:fixed;
+      filter: blur(2px) saturate(110%);
+      pointer-events:none;
+    }
+    .glass{
+      background: rgba(18,22,28,.78);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border:1px solid rgba(255,255,255,.06); border-radius:16px;
+      box-shadow:0 8px 30px rgba(0,0,0,.35);
+      color:#e9eef5;
+    }
+    .glass a{ color:#90caf9; }
+    .glass h1,.glass h2,.glass h3{ color:#fff; }
+  </style>
+</head>
+
+  <body class="min-h-screen relative">
+    <div class="site-bg" aria-hidden="true"></div>
+
+    <header class="relative z-30">
+      
+
+<header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <nav class="flex items-center justify-between h-20">
+      
+      <a href="/ru/" class="flex items-center space-x-3">
+        
+          <img src="/images/logo.png" alt="TOPS GUIDE" class="h-8">
+        
+        <span class="text-xl font-semibold text-gray-900">TOPS GUIDE</span>
+      </a>
+
+      
+      <div class="hidden md:flex items-center space-x-8">
+        
+          
+          
+          
+            
+          
+          
+            <a href="/ru/events/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Ивенты</a>
+          
+        
+          
+          
+          
+            
+          
+          
+            <a href="/ru/first_step/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Первые шаги</a>
+          
+        
+          
+          
+          
+            
+          
+          
+            <a href="/ru/mods/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Моды</a>
+          
+        
+          
+          
+          
+            
+          
+          
+            <a href="/ru/guide/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Гайды</a>
+          
+        
+          
+          
+          
+            
+          
+          
+            <div class="relative group">
+              <a href="/ru/tourism/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition flex items-center">
+                Города и туризм
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </a>
+              <div class="absolute left-0 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                <div class="py-3 bg-white/5 backdrop-blur-md ring-1 ring-white/10 shadow-xl rounded-xl">
+                  
+                    
+                    
+                      
+                    
+                    <a href="/ru/tourism/towns/" class="block px-8 py-3 text-sm text-white/90 hover:bg-white/10">Города</a>
+                  
+                </div>
+              </div>
+            </div>
+          
+        
+          
+          
+          
+            
+          
+          
+            <a href="https://t.me/mylesvintagestory" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">РУ ТГ</a>
+          
+        
+      </div>
+
+      
+      <div class="hidden md:flex items-center space-x-3">
+        
+          <a href="https://chisel-beta.vercel.app/" class="inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium border-2 border-gray-200 hover:border-primary-600 hover:text-primary-600">Все для чизла</a>
+        
+        
+          <a href="/ru/call_me" class="inline-flex items-center justify-center px-4 py-2 rounded-lg font-semibold bg-primary-600 text-white hover:bg-primary-700">Связаться со мной</a>
+        
+        <div class="inline-flex items-center rounded-full border border-slate-200 bg-white p-0.5">
+  <a href="/ru/call_me/"
+     class="px-2.5 py-1 rounded-full text-sm bg-slate-900 text-white">RU</a>
+  <a href="/call_me/"
+     class="px-2.5 py-1 rounded-full text-sm text-slate-700 hover:bg-slate-100">EN</a>
+</div>
+      </div>
+
+      
+      <div class="md:hidden">
+        <button id="navbtn" class="p-2 rounded-lg hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <div class="space-y-1">
+        
+          
+          
+            
+          
+          <a href="/ru/events/" class="block py-2 text-base font-medium">Ивенты</a>
+        
+          
+          
+            
+          
+          <a href="/ru/first_step/" class="block py-2 text-base font-medium">Первые шаги</a>
+        
+          
+          
+            
+          
+          <a href="/ru/mods/" class="block py-2 text-base font-medium">Моды</a>
+        
+          
+          
+            
+          
+          <a href="/ru/guide/" class="block py-2 text-base font-medium">Гайды</a>
+        
+          
+          
+            
+          
+          <a href="/ru/tourism/" class="block py-2 text-base font-medium">Города и туризм</a>
+        
+          
+          
+            
+          
+          <a href="https://t.me/mylesvintagestory" class="block py-2 text-base font-medium">РУ ТГ</a>
+        
+      </div>
+      <div class="mt-3">
+        <div class="inline-flex items-center rounded-full border border-slate-200 bg-white p-0.5">
+  <a href="/ru/call_me/"
+     class="px-2.5 py-1 rounded-full text-sm bg-slate-900 text-white">RU</a>
+  <a href="/call_me/"
+     class="px-2.5 py-1 rounded-full text-sm text-slate-700 hover:bg-slate-100">EN</a>
+</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('navbtn');
+  var menu = document.getElementById('mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', function () {
+      var hidden = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', !hidden);
+      btn.setAttribute('aria-expanded', hidden ? 'true' : 'false');
+    });
+  }
+});
+</script>
+
+    </header>
+
+    <main class="relative z-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="glass p-6 sm:p-8">
+          
+<section class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl py-8">
+  <article class="prose max-w-none">
+    <p>Хотите добавить точку на карте, маршрут, город или новость? Отправьте заявку — модераторы проверят и опубликуют.</p>
+
+<div class="not-prose max-w-3xl mx-auto">
+
+  <div class="grid sm:grid-cols-2 gap-4 mb-8">
+    <div class="rounded-xl ring-1 ring-slate-200 bg-white p-4">
+      <div class="text-sm text-slate-500">Что прислать</div>
+      <ul class="mt-2 text-sm list-disc list-inside text-slate-700 space-y-1">
+        <li>Название и краткое описание</li>
+        <li>Координаты/ссылки, если есть</li>
+        <li>Скриншоты или источники</li>
+      </ul>
+    </div>
+    <div class="rounded-xl ring-1 ring-slate-200 bg-white p-4">
+      <div class="text-sm text-slate-500">После отправки</div>
+      <ul class="mt-2 text-sm list-disc list-inside text-slate-700 space-y-1">
+        <li>Проверка модератором</li>
+        <li>Уточнение деталей</li>
+        <li>Публикация на сайте</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="alert" class="hidden mb-4 rounded-lg p-3 text-sm" role="status" aria-live="polite"></div>
+
+  <form id="feedbackForm" class="rounded-2xl ring-1 ring-slate-200 bg-white p-5">
+    <h3 class="mb-4 text-lg font-semibold">💡 Предложения и пожелания</h3>
+
+    <!-- honeypot -->
+    <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <label class="block mb-4">
+      <span class="block text-sm font-medium text-slate-700">Ник в игре</span>
+      <input type="text" name="name" required
+             class="mt-1 w-full p-2 rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+      <div data-err="name" class="hidden mt-1 text-xs text-red-600"></div>
+    </label>
+
+    <label class="block mb-4">
+      <span class="block text-sm font-medium text-slate-700">Ник в Telegram (необязательно)</span>
+      <input type="text" name="telegram" placeholder="@nickname"
+             class="mt-1 w-full p-2 rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+      <div data-err="telegram" class="hidden mt-1 text-xs text-red-600"></div>
+    </label>
+
+    <label class="block mb-4">
+      <div class="flex items-center justify-between">
+        <span class="block text-sm font-medium text-slate-700">Описание</span>
+        <span id="counter" class="text-xs text-slate-400">0/2000</span>
+      </div>
+      <textarea name="message" rows="6" required maxlength="2000"
+                class="mt-1 w-full p-3 rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+      <div data-err="message" class="hidden mt-1 text-xs text-red-600"></div>
+    </label>
+
+    <div class="text-xs text-slate-500 mb-3">Отправляя форму, вы соглашаетесь с модерацией и публикацией.</div>
+
+    <button type="submit" id="submitBtn"
+      class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-5 rounded-xl shadow transition disabled:opacity-60">
+      <svg id="spinner" class="hidden animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+      </svg>
+      <span id="btnText">Отправить</span>
+    </button>
+  </form>
+</div>
+
+<script>
+(function(){
+  const form = document.getElementById("feedbackForm");
+  const btn  = document.getElementById("submitBtn");
+  const spin = document.getElementById("spinner");
+  const txt  = document.getElementById("btnText");
+  const alertBox = document.getElementById("alert");
+  const counter = document.getElementById("counter");
+  const endpoint = "https://obratka.vercel.app/api/send";
+  const tgRe = /^@?[A-Za-z0-9_]{3,32}$/; // своя валидация, без HTML pattern
+
+  form.message.addEventListener("input", () => {
+    counter.textContent = form.message.value.length + "/2000";
+  });
+
+  function setErr(field, msg){
+    const el = form.querySelector('[data-err="'+field+'"]');
+    if (!el) return;
+    if (msg){ el.textContent = msg; el.classList.remove("hidden"); }
+    else    { el.textContent = "";  el.classList.add("hidden"); }
+  }
+  function showAlert(ok, msg){
+    alertBox.className = "mb-4 rounded-lg p-3 text-sm " + (ok
+      ? "bg-green-50 text-green-700 ring-1 ring-green-200"
+      : "bg-red-50 text-red-700 ring-1 ring-red-200");
+    alertBox.textContent = msg;
+    alertBox.classList.remove("hidden");
+  }
+
+  form.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+
+    // honeypot
+    if (form.website.value) return;
+
+    const name = form.name.value.trim();
+    const message = form.message.value.trim();
+    let telegram  = form.telegram.value.trim();
+
+    setErr("name"); setErr("message"); setErr("telegram");
+
+    if (!name){ setErr("name","Укажите ник."); form.name.focus(); return; }
+    if (!message){ setErr("message","Опишите предложение."); form.message.focus(); return; }
+    if (telegram && !tgRe.test(telegram)){ setErr("telegram","Формат: @nickname"); form.telegram.focus(); return; }
+    if (telegram && telegram[0] !== "@") telegram = "@"+telegram;
+
+    // простая защита от спама
+    const now = Date.now();
+    const last = +localStorage.getItem("callme_last_ru")||0;
+    if (now - last < 30000){ showAlert(false,"Слишком часто. Попробуйте позже."); return; }
+
+    btn.disabled = true; spin.classList.remove("hidden"); txt.textContent = "Отправка…";
+    try{
+      const res = await fetch(endpoint, {
+        method:"POST", headers:{ "Content-Type":"application/json" },
+        body: JSON.stringify({ name, telegram, message })
+      });
+      if (res.ok){
+        showAlert(true,"Готово! Мы получили вашу заявку.");
+        form.reset(); counter.textContent = "0/2000";
+        localStorage.setItem("callme_last_ru", String(now));
+      }else{
+        showAlert(false,"Ошибка сервера. Попробуйте позже.");
+      }
+    }catch{
+      showAlert(false,"Ошибка сети.");
+    }finally{
+      btn.disabled = false; spin.classList.add("hidden"); txt.textContent = "Отправить";
+    }
+  });
+})();
+</script>
+
+
+  </article>
+</section>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="relative z-20">
+      
+<footer class="mt-auto bg-slate-900/90 border-t border-white/10 relative z-10">
+  
+  <style>
+     
+    html, body { height: 100%; }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1 0 auto; }
+
+     
+    header { background: #0f172a !important; color: #e5e7eb !important; }
+    header a { color: #e5e7eb !important; }
+    header a:hover { color: #ffffff !important; }
+
+     
+    header .bg-primary-500,
+    header .bg-primary-600,
+    header .hover\:bg-primary-600,
+    header .hover\:bg-primary-700 {
+      background-color: #d4a436 !important;  
+      border-color: transparent !important;
+      color: #ffffff !important;
+    }
+    header .bg-primary-500:hover,
+    header .bg-primary-600:hover,
+    header .hover\:bg-primary-600:hover,
+    header .hover\:bg-primary-700:hover {
+      background-color: #bb8e23 !important;  
+      color: #ffffff !important;
+    }
+  </style>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-end gap-4">
+    
+    
+      <a href="https://discord.com/users/698122435266084975" class="text-slate-400 hover:text-white" aria-label="Discord" target="_blank" rel="noopener">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3c-.2.36-.43.86-.59 1.25a18.27 18.27 0 0 0-7.94 0A8.14 8.14 0 0 0 7.44 3a19.82 19.82 0 0 0-3.76 1.369C1.78 8.06 1.11 11.64 1.36 15.18c1.58 1.17 3.11 1.88 4.62 2.35.37-.51.7-1.05.98-1.62-.54-.19-1.05-.42-1.54-.68l.38-.3c2.96 1.37 6.16 1.37 9.09 0l.38.3c-.48.26-1 .49-1.53.68.27.57.6 1.11.97 1.62 1.51-.47 3.05-1.18 4.62-2.35.3-4.02-.52-7.57-1.97-10.81ZM9.22 13.62c-.89 0-1.62-.84-1.62-1.88 0-1.03.72-1.88 1.62-1.88.9 0 1.63.85 1.62 1.88 0 1.04-.72 1.88-1.62 1.88Zm5.56 0c-.89 0-1.62-.84-1.62-1.88 0-1.03.73-1.88 1.62-1.88.9 0 1.63.85 1.62 1.88 0 1.04-.72 1.88-1.62 1.88Z"/></svg>
+      </a>
+    
+    
+      <a href="https://github.com/Metalismaticus" class="text-slate-400 hover:text-white" aria-label="GitHub" target="_blank" rel="noopener">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.6-2.81 5.62-5.49 5.92.43.37.82 1.09.82 2.21v3.28c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+      </a>
+    
+
+    <span class="text-sm text-slate-300">Designed by Metalismatic</span>
+  </div>
+</footer>
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+{{ define "main" }}
+<div class="container pt-20 md:pt-24">
+  <div class="not-prose">
+
+    {{/* собрать ВСЕ дочерние элементы раздела guide для текущего языка */}}
+    {{ $sec      := .CurrentSection }}
+    {{ $sections := where $sec.Sections "Language.Lang" .Site.Language.Lang }}
+    {{ $pages    := where $sec.Pages    "Language.Lang" .Site.Language.Lang }}
+    {{ $items    := sort (union $sections $pages) "Date" "desc" }}
+    {{ $cta      := cond (eq .Site.Language.Lang "ru") "Читать →" "Read →" }}
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {{ range $p := $items }}
+        <a href="{{ $p.RelPermalink }}" class="card-glass">
+          {{/* cover: ресурс → относительный путь → абсолютный/URL */}}
+          {{ $img := "" }}
+          {{ with $p.Params.cover }}
+            {{ $c := . }}
+            {{ with $p.Resources.GetMatch $c }}{{ $img = .RelPermalink }}
+            {{ else }}
+              {{ if or (strings.HasPrefix $c "/") (strings.HasPrefix $c "http://") (strings.HasPrefix $c "https://") }}
+                {{ $img = (relURL $c) }}
+              {{ else }}
+                {{ $img = (printf "%s%s" $p.RelPermalink $c) }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if $img }}
+            <img src="{{ $img }}" alt="" class="w-full h-40 object-cover rounded-lg mb-3" loading="lazy" decoding="async">
+          {{ end }}
+
+          <div class="text-xs opacity-70">{{ $p.Date.Format "02.01.2006" }}</div>
+          <div class="font-semibold mt-1">{{ $p.Title }}</div>
+
+          {{ with $p.Params.description }}
+            <p class="text-sm mt-1">{{ . }}</p>
+          {{ else }}
+            {{ with $p.Summary }}<p class="text-sm mt-1">{{ . | plainify | truncate 140 }}</p>{{ end }}
+          {{ end }}
+
+          <span class="mt-2 inline-flex cta text-sm">{{ $cta }}</span>
+        </a>
+      {{ else }}
+        <div class="card-glass"><p class="opacity-80">{{ if eq $.Site.Language.Lang "ru" }}Нет публикаций.{{ else }}No posts.{{ end }}</p></div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

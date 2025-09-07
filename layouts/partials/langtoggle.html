@@ -1,0 +1,25 @@
+{{/* Language toggle: go to the translation of the CURRENT page if it exists, else go to target-language home. */}}
+{{- $page := .Page -}}
+{{- $curr := .Site.Language.Lang -}}
+
+{{/* Resolve RU target */}}
+{{- $ruPage := index (where $page.AllTranslations "Lang" "ru") 0 -}}
+{{- if not $ruPage -}}
+  {{- $ruSite := index (where .Sites "Language.Lang" "ru") 0 -}}
+  {{- if $ruSite -}}{{- $ruPage = $ruSite.Home -}}{{- end -}}
+{{- end -}}
+
+{{/* Resolve EN target */}}
+{{- $enPage := index (where $page.AllTranslations "Lang" "en") 0 -}}
+{{- if not $enPage -}}
+  {{- $enSite := index (where .Sites "Language.Lang" "en") 0 -}}
+  {{- if $enSite -}}{{- $enPage = $enSite.Home -}}{{- end -}}
+{{- end -}}
+
+{{- $isRU := eq $curr "ru" -}}
+<div class="inline-flex items-center rounded-full border border-slate-200 bg-white p-0.5">
+  <a href="{{ with $ruPage }}{{ .RelPermalink }}{{ end }}"
+     class="px-2.5 py-1 rounded-full text-sm {{ if $isRU }}bg-slate-900 text-white{{ else }}text-slate-700 hover:bg-slate-100{{ end }}">RU</a>
+  <a href="{{ with $enPage }}{{ .RelPermalink }}{{ end }}"
+     class="px-2.5 py-1 rounded-full text-sm {{ if not $isRU }}bg-slate-900 text-white{{ else }}text-slate-700 hover:bg-slate-100{{ end }}">EN</a>
+</div>

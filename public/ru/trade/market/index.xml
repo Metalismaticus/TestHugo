@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>РњР°РіР°Р·РёРЅ РЅР° РґРёРІР°РЅРµ on Saasify</title>
+    <link>//localhost:1313/ru/trade/market/</link>
+    <description>Recent content in РњР°РіР°Р·РёРЅ РЅР° РґРёРІР°РЅРµ on Saasify</description>
+    <generator>Hugo</generator>
+    <language>ru-RU</language>
+    <atom:link href="//localhost:1313/ru/trade/market/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

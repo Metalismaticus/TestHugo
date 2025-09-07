@@ -1,0 +1,7 @@
+images:
+  - image: /uploads/slider/image1.jpg
+    href: "https://mods.vintagestory.at/show/mod/27985"
+  - image: /uploads/slider/image2.jpg
+    href: "https://mods.vintagestory.at/pingme"
+  - image: /uploads/slider/image3.jpg
+    href: "https://chisel-beta.vercel.app/"

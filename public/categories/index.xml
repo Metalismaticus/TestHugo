@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Saasify</title>
-    <link>https://saasify-demo.chaoming.li/categories/</link>
-    <description>Recent content in Categories on Saasify</description>
+    <title>Categories on TOPS GUIDE</title>
+    <link>//localhost:1313/categories/</link>
+    <description>Recent content in Categories on TOPS GUIDE</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 24 Jul 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://saasify-demo.chaoming.li/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-US</language>
+    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Content</title>
-      <link>https://saasify-demo.chaoming.li/categories/content/</link>
-      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://saasify-demo.chaoming.li/categories/content/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Performance</title>
-      <link>https://saasify-demo.chaoming.li/categories/performance/</link>
-      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://saasify-demo.chaoming.li/categories/performance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Deployment</title>
-      <link>https://saasify-demo.chaoming.li/categories/deployment/</link>
-      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://saasify-demo.chaoming.li/categories/deployment/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Development</title>
-      <link>https://saasify-demo.chaoming.li/categories/development/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://saasify-demo.chaoming.li/categories/development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tutorials</title>
-      <link>https://saasify-demo.chaoming.li/categories/tutorials/</link>
-      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://saasify-demo.chaoming.li/categories/tutorials/</guid>
+      <title>Guides</title>
+      <link>//localhost:1313/categories/guides/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/guides/</guid>
       <description></description>
     </item>
   </channel>

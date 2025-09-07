@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ens on TOPS GUIDE</title>
+    <link>//localhost:1313/en/</link>
+    <description>Recent content in Ens on TOPS GUIDE</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Useful Tips</title>
+      <link>//localhost:1313/en/guide/useful-tips/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/guide/useful-tips/</guid>
+      <description>&lt;div class=&#34;not-prose space-y-6&#34;&gt;&#xA;  &lt;div class=&#34;card-glass prose prose-invert max-w-none&#34;&gt;&#xA;    &lt;h2&gt;Contents&lt;/h2&gt;&#xA;    &lt;ul&gt;&#xA;      &lt;li&gt;Hotkeys and macros&lt;/li&gt;&#xA;      &lt;li&gt;Inventory tricks&lt;/li&gt;&#xA;      &lt;li&gt;Workflow optimization&lt;/li&gt;&#xA;    &lt;/ul&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

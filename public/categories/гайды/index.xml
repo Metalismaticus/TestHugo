@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Гайды on TOPS GUIDE</title>
+    <link>//localhost:1313/categories/%D0%B3%D0%B0%D0%B9%D0%B4%D1%8B/</link>
+    <description>Recent content in Гайды on TOPS GUIDE</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/%D0%B3%D0%B0%D0%B9%D0%B4%D1%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Полезные фишки</title>
+      <link>//localhost:1313/ru/guide/poleznye-fishki/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ru/guide/poleznye-fishki/</guid>
+      <description>&lt;div class=&#34;not-prose space-y-6&#34;&gt;&#xA;  &lt;div class=&#34;card-glass prose prose-invert max-w-none&#34;&gt;&#xA;    &lt;h2&gt;Содержание&lt;/h2&gt;&#xA;    &lt;ul&gt;&#xA;      &lt;li&gt;Горячие клавиши и макросы&lt;/li&gt;&#xA;      &lt;li&gt;Трюки инвентаря&lt;/li&gt;&#xA;      &lt;li&gt;Оптимизация работы&lt;/li&gt;&#xA;    &lt;/ul&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

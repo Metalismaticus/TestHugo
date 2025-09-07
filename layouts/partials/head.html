@@ -1,0 +1,36 @@
+{{- /* layouts/partials/head.html – css.PostCSS + bg helpers */ -}}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>{{ if .Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+
+  {{- $css := resources.Get "css/main.css" | css.PostCSS (dict "config" "postcss.config.js") -}}
+  {{- if hugo.IsServer -}}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  {{- else -}}
+    {{- $css = $css | resources.Minify | resources.Fingerprint "sha384" -}}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
+  {{- end -}}
+
+  <style>
+    :root{ --bg-url: url("/images/vs-tavern.jpg"); }
+    html,body{ height:100%; }
+    .site-bg{
+      position:fixed; inset:0; z-index:-1;
+      background: linear-gradient(rgba(10,12,16,.72), rgba(10,12,16,.72)), var(--bg-url);
+      background-size:cover; background-position:center; background-attachment:fixed;
+      filter: blur(2px) saturate(110%);
+      pointer-events:none;
+    }
+    .glass{
+      background: rgba(18,22,28,.78);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border:1px solid rgba(255,255,255,.06); border-radius:16px;
+      box-shadow:0 8px 30px rgba(0,0,0,.35);
+      color:#e9eef5;
+    }
+    .glass a{ color:#90caf9; }
+    .glass h1,.glass h2,.glass h3{ color:#fff; }
+  </style>
+</head>

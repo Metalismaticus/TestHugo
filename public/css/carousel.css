@@ -1,0 +1,67 @@
+
+/* Hide scrollbars but keep swipe */
+.hc-track { overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+.hc-track::-webkit-scrollbar { display: none; }
+
+.hc-slider { position: relative; }
+.hc-viewport { position: relative; }
+.hc-track {
+  display: flex;
+  height: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.hc-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+  scroll-snap-align: center;
+  display: grid;
+  place-items: center;
+  background: #0b12201a;
+}
+.hc-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+.hc-caption {
+  position: absolute;
+  left: 1rem; right: 1rem; bottom: 1rem;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  font-size: .875rem;
+}
+
+/* arrows */
+.hc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(15,23,42,.7);
+  color:#fff;
+  border:0;
+  width: 2.25rem; height: 2.25rem;
+  border-radius:9999px;
+  cursor:pointer;
+  display:grid; place-items:center;
+}
+.hc-prev { left: .5rem; }
+.hc-next { right: .5rem; }
+.hc-arrow:hover { background: rgba(15,23,42,.85); }
+
+/* bullets */
+.hc-bullets {
+  position: absolute;
+  left:0; right:0; bottom:.5rem;
+  display:flex; gap:.5rem; justify-content:center;
+}
+.hc-bullets button {
+  width:.5rem; height:.5rem; border-radius:9999px;
+  background:#cbd5e1; border:0; cursor:pointer;
+}
+.hc-bullets button[aria-current="true"] { background:#2563eb; }

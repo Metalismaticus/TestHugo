@@ -3,8 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Явный путь к конфигу CMS -->
+    <script>window.CMS_CONFIG_PATH = '/admin/config.yml';</script>
+    <!-- Identity widget для логина, инвайтов и сброса пароля -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script>
+      // Обработка инвайта/восстановления пароля прямо на /admin
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+        window.netlifyIdentity.init();
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,27 @@
+
+{{- /* alert shortcode
+Usage:
+  {{< alert "code" >}}
+  your commands
+  {{< /alert >}}
+
+  {{< alert "info" title="Note" >}}HTML allowed here{{< /alert >}}
+  Optional second arg for code language: {{< alert "code" "bash" >}}
+*/ -}}
+
+{{- $kind := .Get 0 | default "info" -}}
+{{- $lang := .Get 1 | default "bash" -}}
+{{- $title := .Get "title" | default "" -}}
+{{- $inner := .Inner -}}
+
+{{- if eq $kind "code" -}}
+  {{- $code := trim $inner "\n\r\t " -}}
+  <div class="not-prose rounded-xl ring-1 ring-white/10 bg-white/5 backdrop-blur-md p-3">
+    {{ highlight $code $lang "" }}
+  </div>
+{{- else -}}
+  <div class="not-prose rounded-xl ring-1 ring-white/10 bg-white/5 backdrop-blur-md p-3">
+    {{- with $title }}<div class="font-semibold mb-1">{{ . }}</div>{{ end -}}
+    <div class="text-sm opacity-90">{{ $inner | safeHTML }}</div>
+  </div>
+{{- end -}}

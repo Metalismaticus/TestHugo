@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* === overrides: force white text on dark theme === */
+@layer base {
+  body { @apply text-white; }
+}
+@layer components {
+  /* Header brand and nav white even if text-gray-* present */
+  header .text-gray-900,
+  header .text-gray-800,
+  header .text-gray-700,
+  header .text-gray-600 { color:#fff !important; }
+
+  /* Content blocks with dark glass background */
+  .glass { color:#fff; }
+  .glass .text-gray-900,
+  .glass .text-gray-800,
+  .glass .text-gray-700,
+  .glass .text-gray-600 { color:#fff !important; }
+}
+/* === end overrides === */
+
+
 @layer base {
   html {
     @apply scroll-smooth;
@@ -184,4 +206,20 @@
   .table-of-contents ul {
     @apply list-none ml-4 space-y-2;
   }
+
+
 }
+/* fix: readable text in glass cards */
+@layer components {
+  .card-glass {
+    @apply block rounded-xl ring-1 ring-white/10 bg-white/5 backdrop-blur-md p-4 transition hover:shadow-lg hover:ring-white/20;
+    color:#e6edf3;
+  }
+  .card-glass .font-semibold,
+  .card-glass h1,.card-glass h2,.card-glass h3,.card-glass h4 { color:#fff !important; }
+  .card-glass p, .card-glass li { color:#cfd8e3 !important; }
+  .card-glass [class*="text-slate-"], .card-glass [class*="text-gray-"] { color:inherit !important; }
+  .card-glass [class*="opacity-"] { opacity:1 !important; }
+  .card-glass .cta { @apply text-primary-300; }
+}
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>РќРѕРІРѕСЃС‚Рё on Saasify</title>
+    <link>//localhost:1313/en/news/</link>
+    <description>Recent content in РќРѕРІРѕСЃС‚Рё on Saasify</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <atom:link href="//localhost:1313/en/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>РљР°РЅР°Р» РјРµР¶РґСѓ Р“РѕРЅРґРѕСЂРѕРј Рё Р‘СЂРѕРЅР·РѕРІС‹Рј РіРѕСЂРѕРґРѕРј</title>
+      <link>//localhost:1313/en/news/15.04.2025/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/news/15.04.2025/</guid>
+      <description>РЎС‚СЂРѕРёС‚РµР»СЊСЃС‚РІРѕ СЃСѓРґРѕС…РѕРґРЅРѕРіРѕ РєР°РЅР°Р»Р°</description>
+    </item>
+    <item>
+      <title>РћС‚РєСЂС‹С‚РёРµ РєР°РЅР°Р»Р° РјРµР¶РґСѓ Р“РѕРЅРґРѕСЂРѕРј Рё Р‘СЂРѕРЅР·РѕРІС‹Рј РіРѕСЂРѕРґРѕРј</title>
+      <link>//localhost:1313/en/news/18.04.2025/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/news/18.04.2025/</guid>
+      <description>РЎСѓРґРѕС…РѕРґРЅС‹Р№ РєР°РЅР°Р» РїРѕР»РЅРѕСЃС‚СЊСЋ РґРѕСЃС‚СЂРѕРµРЅ</description>
+    </item>
+    <item>
+      <title>РќРѕРІС‹Р№ Р’Р°РІРёР»РѕРЅ РёР»Рё Р¶Рµ Р‘Р°С€РЅСЏ Р’Р°Р№РїР°?</title>
+      <link>//localhost:1313/en/news/15.07.2025/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/news/15.07.2025/</guid>
+      <description>РІР°Р№Рї РІСЃРµРіРѕ РјРёСЂР°</description>
+    </item>
+    <item>
+      <title>РЎРІРѕРґРєР° РЅРѕРІРѕСЃС‚РµР№ 17.04.2025</title>
+      <link>//localhost:1313/en/news/17.04.2025/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/news/17.04.2025/</guid>
+      <description>РЅРѕРІРѕСЃС‚Рё Рё РїСЂРѕРёСЃС€РµСЃС‚РІРёСЏ</description>
+    </item>
+    <item>
+      <title>РџРµСЂРІС‹Р№ РёРіСЂРѕРє, РєС‚Рѕ РґР°С€РµР» РґРѕ РєСЂР°СЏ РјРёСЂР° Рё РѕР±РѕС€РµР» РІСЃСЋ РєР°СЂС‚Сѓ</title>
+      <link>//localhost:1313/en/news/16.07.2025/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/en/news/16.07.2025/</guid>
+      <description>Р° Р·РµРјР»СЏ-С‚Рѕ РїР»РѕСЃРєР°СЏ</description>
+    </item>
+  </channel>
+</rss>
