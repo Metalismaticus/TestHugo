@@ -1,7 +1,7 @@
 ﻿---
 title: "Tourism"
 ---
-
+[📍 Go to the list of cities →](/tourism/towns/)
 ## Top points of interest
 
 {{< raw >}}

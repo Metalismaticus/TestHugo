@@ -181,18 +181,6 @@
                 href="//localhost:1313/tourism/evangelion/"
                 />
   </url><url>
-    <loc>//localhost:1313/tourism/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru-RU"
-                href="//localhost:1313/ru/tourism/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/tourism/"
-                />
-  </url><url>
     <loc>//localhost:1313/first_step/</loc>
     <xhtml:link
                 rel="alternate"
@@ -299,6 +287,18 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="//localhost:1313/tags/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tourism/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru-RU"
+                href="//localhost:1313/ru/tourism/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tourism/"
                 />
   </url><url>
     <loc>//localhost:1313/mods/</loc>

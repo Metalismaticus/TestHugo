@@ -8,7 +8,7 @@ title: "TOPS Server Fan Portal"
 <div class="not-prose space-y-8 mt-8">
 
   <div class="card-glass prose prose-invert max-w-none">
-    <p><strong>TOPS Portal</strong> — news, guides, routes, and handy tools for players.</p>
+    <p><strong>TOPS GUIDE</strong> — news, guides, routes, and handy tools for players.</p>
     <p>The site is useful for both newcomers and veterans: popular places and towns of the server, plus a guide to the ancient world of TOPS.</p>
   </div>
 
