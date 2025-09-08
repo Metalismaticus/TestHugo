@@ -1,0 +1,26 @@
+{{- $x := .Get "x" -}}
+{{- $y := .Get "y" -}}
+{{- $cmd := .Get "cmd" | default (printf ".tlpath find %s %s" $x $y) -}}
+
+<div class="block my-2">
+  <div class="flex items-center gap-2">
+    <code
+      class="tlcopy-code rounded-lg text-sm font-mono px-3 py-2"
+      style="background:#1f2937;color:#34d399;">{{ $cmd }}</code>
+
+    <button
+      type="button"
+      class="inline-flex h-9 w-9 items-center justify-center rounded-lg focus:outline-none"
+      style="background:#374151;"
+      title="Копировать" aria-label="Copy"
+      data-cmd="{{ $cmd }}"
+      onclick="(async(b)=>{try{await navigator.clipboard.writeText(b.dataset.cmd)}
+        catch(e){const t=document.createElement('textarea');t.value=b.dataset.cmd;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+        b.style.boxShadow='0 0 0 2px #34d399';setTimeout(()=>b.style.boxShadow='',900)})(this)">
+      <svg viewBox='0 0 24 24' class="h-5 w-5" style="color:#34d399" aria-hidden="true">
+        <path fill="currentColor"
+          d="M9 7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V7Zm-4 3a2 2 0 0 1 2-2h1v2H7v7h7v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8Z"/>
+      </svg>
+    </button>
+  </div>
+</div>

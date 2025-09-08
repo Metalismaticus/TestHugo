@@ -10,7 +10,7 @@ showReadingTime: false
 layoutBackgroundHeaderSpace: false
 ---
 
-Got a place, route or story worth adding? Send it — editors will review and publish.
+## Got a place, route or  adding? Send it — editors will review and publish.
 
 {{< raw >}}
 <div class="not-prose max-w-3xl mx-auto">
@@ -49,10 +49,10 @@ Got a place, route or story worth adding? Send it — editors will review and pu
     </label>
 
     <label class="block mb-4">
-      <span class="block text-sm font-medium text-slate-700">Telegram (optional)</span>
-      <input type="text" name="telegram" placeholder="@nickname"
+      <span class="block text-sm font-medium text-slate-700">Discord (optional)</span>
+      <input type="text" name="discord" placeholder="@username or Name#1234"
              class="mt-1 w-full p-2 rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500">
-      <div data-err="telegram" class="hidden mt-1 text-xs text-red-600"></div>
+      <div data-err="discord" class="hidden mt-1 text-xs text-red-600"></div>
     </label>
 
     <label class="block mb-4">
@@ -87,7 +87,9 @@ Got a place, route or story worth adding? Send it — editors will review and pu
   const alertBox = document.getElementById("alert");
   const counter = document.getElementById("counter");
   const endpoint = "https://obratka.vercel.app/api/send";
-  const tgRe = /^@?[A-Za-z0-9_]{3,32}$/;
+
+  // Accept @username (new Discord), or Name#1234 (legacy)
+  const dcRe = /^(?:@?[A-Za-z0-9._]{2,32}|[\\w .-]{2,32}#\\d{4})$/;
 
   form.message.addEventListener("input", () => {
     counter.textContent = form.message.value.length + "/2000";
@@ -113,14 +115,20 @@ Got a place, route or story worth adding? Send it — editors will review and pu
 
     const name = form.name.value.trim();
     const message = form.message.value.trim();
-    let telegram  = form.telegram.value.trim();
+    let discord  = (form.discord.value || "").trim();
 
-    setErr("name"); setErr("message"); setErr("telegram");
+    setErr("name"); setErr("message"); setErr("discord");
 
     if (!name){ setErr("name","Please enter a nick."); form.name.focus(); return; }
     if (!message){ setErr("message","Please describe your suggestion."); form.message.focus(); return; }
-    if (telegram && !tgRe.test(telegram)){ setErr("telegram","Format: @nickname"); form.telegram.focus(); return; }
-    if (telegram && telegram[0] !== "@") telegram = "@"+telegram;
+    if (discord && !dcRe.test(discord)){
+      setErr("discord","Format: @username or Name#1234");
+      form.discord.focus();
+      return;
+    }
+    if (discord && discord[0] !== "@" && !/#\d{4}$/.test(discord)) {
+      discord = "@"+discord;
+    }
 
     const now = Date.now();
     const last = +localStorage.getItem("callme_last_en")||0;
@@ -128,9 +136,12 @@ Got a place, route or story worth adding? Send it — editors will review and pu
 
     btn.disabled = true; spin.classList.remove("hidden"); txt.textContent = "Sending…";
     try{
+      const payload = { name, discord, message };
+      // for backend compatibility also send 'telegram' mirror if needed
+      payload.telegram = discord || "";
       const res = await fetch(endpoint, {
         method:"POST", headers:{ "Content-Type":"application/json" },
-        body: JSON.stringify({ name, telegram, message })
+        body: JSON.stringify(payload)
       });
       if (res.ok){
         showAlert(true,"Thanks! We received your submission.");

@@ -11,4 +11,4 @@ layoutBackgroundHeaderSpace: false
 ---
 
 
-no information
+The city is more likely to be abandoned at the construction stage than to have any prospect of being completed

@@ -28,19 +28,6 @@
                 href="//localhost:1313/guide/class/"
                 />
   </url><url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru-RU"
-                href="//localhost:1313/ru/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/"
-                />
-  </url><url>
     <loc>//localhost:1313/categories/guides/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -94,6 +81,19 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="//localhost:1313/guide/story/"
+                />
+  </url><url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2025-09-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru-RU"
+                href="//localhost:1313/ru/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/"
                 />
   </url><url>
     <loc>//localhost:1313/guide/tips/</loc>
@@ -181,18 +181,6 @@
                 href="//localhost:1313/tourism/evangelion/"
                 />
   </url><url>
-    <loc>//localhost:1313/events/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru-RU"
-                href="//localhost:1313/ru/events/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/events/"
-                />
-  </url><url>
     <loc>//localhost:1313/tourism/</loc>
     <xhtml:link
                 rel="alternate"
@@ -263,6 +251,30 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="//localhost:1313/tourism/towns/mylesville/"
+                />
+  </url><url>
+    <loc>//localhost:1313/map/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru-RU"
+                href="//localhost:1313/ru/map/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/map/"
+                />
+  </url><url>
+    <loc>//localhost:1313/tourism/towns/new-babylon/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru-RU"
+                href="//localhost:1313/ru/tourism/towns/new-babylon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tourism/towns/new-babylon/"
                 />
   </url><url>
     <loc>//localhost:1313/tourism/towns/sky-city/</loc>

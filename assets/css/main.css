@@ -221,5 +221,21 @@
   .card-glass [class*="text-slate-"], .card-glass [class*="text-gray-"] { color:inherit !important; }
   .card-glass [class*="opacity-"] { opacity:1 !important; }
   .card-glass .cta { @apply text-primary-300; }
+
+/* tlcopy: стиль и отключение "кавычек" у inline-code */
+  .tlcopy-code { @apply bg-gray-800 text-emerald-400 px-3 py-2 rounded-lg font-mono text-sm; }
+
+  .tlcopy-code::before,
+  .tlcopy-code::after { content: none !important; }
+
+  /* если код вдруг попадает внутрь .prose (типографика Tailwind) */
+  .prose :not(pre) > code.tlcopy-code::before,
+  .prose :not(pre) > code.tlcopy-code::after { content: none !important; }
+
+  /* кнопка копирования (если нужно) */
+  .tlcopy-btn { @apply inline-flex h-9 w-9 items-center justify-center rounded-lg; background:#374151; }
 }
+
+
+
 

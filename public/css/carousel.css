@@ -1,67 +1,56 @@
-
-/* Hide scrollbars but keep swipe */
-.hc-track { overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
-.hc-track::-webkit-scrollbar { display: none; }
-
-.hc-slider { position: relative; }
-.hc-viewport { position: relative; }
-.hc-track {
-  display: flex;
-  height: 100%;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+/* Base */
+.hc-slider{position:relative}
+.hc-viewport{
+  position:relative; overflow:hidden; width:100%;
+  border-radius:inherit; background:rgba(15,23,42,.35);
+  backdrop-filter:saturate(120%) blur(4px);
 }
-.hc-slide {
-  flex: 0 0 100%;
-  height: 100%;
-  position: relative;
-  scroll-snap-align: center;
-  display: grid;
-  place-items: center;
-  background: #0b12201a;
-}
-.hc-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display:block;
-}
-.hc-caption {
-  position: absolute;
-  left: 1rem; right: 1rem; bottom: 1rem;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  padding: .5rem .75rem;
-  border-radius: .5rem;
-  font-size: .875rem;
+.hc-track{display:flex; height:100%; will-change:transform; transition:transform .45s ease}
+.hc-slide{flex:0 0 100%; height:100%; position:relative}
+.hc-link{display:block; width:100%; height:100%; position:relative}
+.hc-slide img{
+  width:100%; height:100%; display:block; object-fit:cover; /* desktop: заполняем */
 }
 
-/* arrows */
-.hc-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(15,23,42,.7);
-  color:#fff;
-  border:0;
-  width: 2.25rem; height: 2.25rem;
-  border-radius:9999px;
-  cursor:pointer;
-  display:grid; place-items:center;
+/* Caption */
+.hc-caption{
+  position:absolute; left:1rem; right:1rem; bottom:1rem;
+  background:rgba(2,6,23,.6); color:#e5e7eb;
+  padding:.75rem 1rem; border-radius:.75rem;
+  font-size:.95rem; line-height:1.4; backdrop-filter:blur(3px)
 }
-.hc-prev { left: .5rem; }
-.hc-next { right: .5rem; }
-.hc-arrow:hover { background: rgba(15,23,42,.85); }
 
-/* bullets */
-.hc-bullets {
-  position: absolute;
-  left:0; right:0; bottom:.5rem;
-  display:flex; gap:.5rem; justify-content:center;
+/* Arrows */
+.hc-arrow{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:2.25rem; height:2.25rem; border:none; border-radius:.75rem;
+  background:rgba(2,6,23,.6); color:#e5e7eb; cursor:pointer;
+  display:grid; place-items:center; transition:opacity .2s, transform .2s
 }
-.hc-bullets button {
-  width:.5rem; height:.5rem; border-radius:9999px;
-  background:#cbd5e1; border:0; cursor:pointer;
+.hc-prev{left:.5rem} .hc-next{right:.5rem}
+.hc-arrow:hover{transform:translateY(-50%) scale(1.05); opacity:.95}
+
+/* Bullets */
+.hc-bullets{
+  position:absolute; left:0; right:0; bottom:.5rem;
+  display:flex; gap:.4rem; justify-content:center; pointer-events:auto
 }
-.hc-bullets button[aria-current="true"] { background:#2563eb; }
+.hc-bullets button{
+  width:.55rem; height:.55rem; border-radius:9999px; border:none;
+  background:rgba(148,163,184,.55); cursor:pointer; transition:transform .2s, background .2s
+}
+.hc-bullets button[aria-current="true"]{ background:#60a5fa; transform:scale(1.15) }
+
+/* Accessibility / Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .hc-track{transition:none}
+}
+
+/* --- Mobile fix: показываем картинку целиком и делаем ниже --- */
+@media (max-width: 640px){
+  .hc-viewport{ height:45vh !important }        /* перекрывает inline 500px */
+  .hc-track,.hc-slide{ height:100% }
+  .hc-slide img{ object-fit:contain; background:#0b1220 } /* без обрезания */
+  .hc-caption{ font-size:.9rem; padding:.5rem .75rem }
+  .hc-arrow{ width:2rem; height:2rem }
+}

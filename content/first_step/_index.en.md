@@ -94,10 +94,22 @@ New on the server? Start with chat setup and basic commands.
 {{< /raw >}}
 
 
-## Land claims
-Guide: <https://wiki.vintagestory.at/Land_claiming/en>
+## Where to settle?
+
+Download and install the mods, then on the [towns]({{< relref "tourism/towns/_index.md" >}}) page choose the route you need and copy a command like:
+
+.tlpath find -700 17028
+
+Paste it into chat and follow the marker to the destination. Note: the TLPath mod not only points the way, it also prints the exact translocator coordinates so you can find it easily. Tip: stick to roads and signposts; this is often the fastest and simplest route.
+
+## How to claim land
+All land-claim commands: <https://wiki.vintagestory.at/Land_claiming/en>
 
 ## Useful links
-- TOPS server map: <https://map.tops.vintagestory.at/?x=-1&y=17&zoom=10>
-- TL Navigator: <https://translocator.moe/>
-- Chisel helper: <https://chisel-beta.vercel.app/>
+
+TOPS server map: <https://map.tops.vintagestory.at/?x=-1&y=17&zoom=10>  
+
+TL Navigator: <https://translocator.moe/>  
+
+Chisel helper: <https://chisel-beta.vercel.app/>
+

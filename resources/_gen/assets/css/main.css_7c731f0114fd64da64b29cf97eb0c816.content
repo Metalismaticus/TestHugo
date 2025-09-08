@@ -2029,6 +2029,35 @@ header .prose code:not(pre code) { color:#fff; }
   --tw-text-opacity: 1;
   color: rgb(125 211 252 / var(--tw-text-opacity, 1));
 }
+/* tlcopy: стиль и отключение "кавычек" у inline-code */
+.tlcopy-code {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+    border-radius: 2rem;
+}
+.tlcopy-code::before,
+  .tlcopy-code::after { content: none !important; }
+/* если код вдруг попадает внутрь .prose (типографика Tailwind) */
+.prose :not(pre) > code.tlcopy-code::before,
+  .prose :not(pre) > code.tlcopy-code::after { content: none !important; }
+/* кнопка копирования (если нужно) */
+.tlcopy-btn {
+  display: inline-flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+    border-radius: 2rem; background:#374151;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -2263,6 +2292,9 @@ header .prose code:not(pre code) { color:#fff; }
 .inline-block {
   display: inline-block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
@@ -2314,6 +2346,9 @@ header .prose code:not(pre code) { color:#fff; }
 .h-8 {
   height: 2rem;
 }
+.h-9 {
+  height: 2.25rem;
+}
 .h-96 {
   height: 24rem;
 }
@@ -2361,6 +2396,9 @@ header .prose code:not(pre code) { color:#fff; }
 }
 .w-80 {
   width: 20rem;
+}
+.w-9 {
+  width: 2.25rem;
 }
 .w-96 {
   width: 24rem;
@@ -2820,6 +2858,9 @@ header .prose code:not(pre code) { color:#fff; }
   -o-object-fit: cover;
      object-fit: cover;
 }
+.p-0 {
+  padding: 0px;
+}
 .p-0\.5 {
   padding: 0.125rem;
 }
@@ -2948,6 +2989,9 @@ header .prose code:not(pre code) { color:#fff; }
 .pt-16 {
   padding-top: 4rem;
 }
+.pt-2 {
+  padding-top: 0.5rem;
+}
 .pt-20 {
   padding-top: 5rem;
 }
@@ -3075,6 +3119,10 @@ header .prose code:not(pre code) { color:#fff; }
 .text-blue-800 {
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity, 1));
+}
+.text-emerald-400 {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
 }
 .text-gray-200 {
   --tw-text-opacity: 1;
@@ -3966,6 +4014,7 @@ header .hover\:text-gray-900:hover { color:#fff !important; }
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity, 1));
   }
+  .sm\:prose :not(pre) > code.tlcopy-code::before,.sm\:prose :not(pre) > code.tlcopy-code::after { content: none !important; }
 }
 @media (min-width: 1024px) {
 
@@ -4257,6 +4306,9 @@ header .hover\:text-gray-900:hover { color:#fff !important; }
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
 }
+.hover\:bg-white\/10:hover {
+  background-color: rgb(255 255 255 / 0.1);
+}
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity, 1));
@@ -4290,6 +4342,9 @@ header .hover\:text-gray-900:hover { color:#fff !important; }
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.hover\:ring-white\/20:hover {
+  --tw-ring-color: rgb(255 255 255 / 0.2);
 }
 .hover\:grayscale-0:hover {
   --tw-grayscale: grayscale(0);
@@ -4541,4 +4596,7 @@ header .hover\:text-gray-900:hover { color:#fff !important; }
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+
+
+
 

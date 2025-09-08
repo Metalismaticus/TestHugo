@@ -9,5 +9,4 @@ showWordCount: false
 showReadingTime: false
 layoutBackgroundHeaderSpace: false
 ---
-
-нет информации
+Город скорее заброшен на стадии строительства, чем имеет перспективы быть достроенным

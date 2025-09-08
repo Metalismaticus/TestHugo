@@ -84,28 +84,20 @@ layoutBackgroundHeaderSpace: false
     </div>
   </section>
 
+{{< topsmap x="-700" y="-17028" zoom="5" >}}
+
+{{< tlcopy x="-700" y="17028" >}} - for copying in mod command TLPath
+
+
   <section>
     <h3 class="mb-3 text-lg font-semibold">🗺️ How to get there</h3>
     <p class="opacity-90">Copy and paste the commands in order in game chat.</p>
-
-    <div class="space-y-3 mt-3">
-      {{< alert "code" >}}
-/waypoint addati spiral 601 110 456 false #FF8000 TL #1
-      {{< /alert >}}
-
-      {{< alert "code" >}}
-/waypoint addati spiral 6142 110 4486 false #FF8000 TL #2
-      {{< /alert >}}
-
-      {{< alert "code" >}}
-/waypoint addati spiral -360 110 7368 false #FF8000 TL #3
-      {{< /alert >}}
-
-      {{< alert "code" >}}
-/waypoint addati spiral -3698 110 9271 false #FF8000 Bronze City
-      {{< /alert >}}
-    </div>
   </section>
+   {{< /raw >}}
+{{< tlcopy cmd="/waypoint addati spiral 601 110 456 false #FF8000 TL №1" >}}
+     
+{{< tlcopy cmd="/waypoint addati spiral 6142 110 4486 false #FF8000 TL №2" >}}
 
-</div>
-{{< /raw >}}
+{{< tlcopy cmd="/waypoint addati spiral -360 110 7368 false #FF8000 TL №3" >}}
+
+{{< tlcopy cmd="/waypoint addati spiral -3698 110 9271 false #FF8000 Бронзовый город" >}}

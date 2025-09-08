@@ -181,18 +181,6 @@
                 href="//localhost:1313/ru/tourism/towns/yellow-heights/"
                 />
   </url><url>
-    <loc>//localhost:1313/ru/events/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="//localhost:1313/events/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru-RU"
-                href="//localhost:1313/ru/events/"
-                />
-  </url><url>
     <loc>//localhost:1313/ru/tourism/towns/kazakhstan/</loc>
     <xhtml:link
                 rel="alternate"
@@ -239,6 +227,30 @@
                 rel="alternate"
                 hreflang="ru-RU"
                 href="//localhost:1313/ru/tourism/towns/sky-city/"
+                />
+  </url><url>
+    <loc>//localhost:1313/ru/map/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/map/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru-RU"
+                href="//localhost:1313/ru/map/"
+                />
+  </url><url>
+    <loc>//localhost:1313/ru/tourism/towns/new-babylon/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="//localhost:1313/tourism/towns/new-babylon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru-RU"
+                href="//localhost:1313/ru/tourism/towns/new-babylon/"
                 />
   </url><url>
     <loc>//localhost:1313/ru/first_step/</loc>

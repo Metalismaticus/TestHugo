@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <title>Fan portal for the TOPS server · TOPS GUIDE</title><link rel="stylesheet" href="/css/main.css" /><style>
+  <title>TOPS Server Fan Portal · TOPS GUIDE</title><link rel="stylesheet" href="/css/main.css" /><style>
     :root{ --bg-url: url("/images/vs-tavern.jpg"); }
     html,body{ height:100%; }
     .site-bg{
@@ -53,7 +53,7 @@
             
           
           
-            <a href="/events/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Events</a>
+            <a href="/first_step/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">First steps</a>
           
         
           
@@ -62,14 +62,7 @@
             
           
           
-            <a href="/first_step/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">First steps</a>
-          
-        
-          
-          
-          
-          
-            <a href="" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Mods</a>
+            <a href="/mods/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Mods</a>
           
         
           
@@ -79,6 +72,15 @@
           
           
             <a href="/guide/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Guide</a>
+          
+        
+          
+          
+          
+            
+          
+          
+            <a href="/map/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Map</a>
           
         
           
@@ -144,23 +146,25 @@
           
             
           
-          <a href="/events/" class="block py-2 text-base font-medium">Events</a>
+          <a href="/first_step/" class="block py-2 text-base font-medium">First steps</a>
         
           
           
             
           
-          <a href="/first_step/" class="block py-2 text-base font-medium">First steps</a>
-        
-          
-          
-          <a href="" class="block py-2 text-base font-medium">Mods</a>
+          <a href="/mods/" class="block py-2 text-base font-medium">Mods</a>
         
           
           
             
           
           <a href="/guide/" class="block py-2 text-base font-medium">Guide</a>
+        
+          
+          
+            
+          
+          <a href="/map/" class="block py-2 text-base font-medium">Map</a>
         
           
           
@@ -204,16 +208,104 @@ document.addEventListener('DOMContentLoaded', function () {
 <section class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl py-8">
   <article class="prose max-w-none">
     <link rel="stylesheet" href="/css/carousel.css">
-<script defer src="/js/carousel.js"></script><div class="hc-slider w-full max-w-5xl mx-auto rounded-xl overflow-hidden" data-items="1" data-duration="7000">
+  <script defer src="/js/carousel.js"></script><div class="hc-slider w-full max-w-5xl mx-auto rounded-xl" data-items="1" data-duration="7000">
   <div class="hc-viewport" style="height: 500px;">
-    <div class="hc-track"><div class="hc-slide"><a href="https://mods.vintagestory.at/show/mod/27985"  class="block w-full h-full relative"><img src="/uploads/slider/image1.jpg" alt="slide 1" loading="lazy"></a></div><div class="hc-slide"><a href="https://mods.vintagestory.at/pingme"  class="block w-full h-full relative"><img src="/uploads/slider/image2.jpg" alt="slide 2" loading="lazy"></a></div><div class="hc-slide"><a href="https://chisel-beta.vercel.app/"  class="block w-full h-full relative"><img src="/uploads/slider/image3.jpg" alt="slide 3" loading="lazy"></a></div></div>
+    <div class="hc-track"><div class="hc-slide"><a href="https://mods.vintagestory.at/show/mod/27985"  class="hc-link"><img src="/uploads/slider/image1.jpg" alt="slide 1"></a></div><div class="hc-slide"><a href="https://mods.vintagestory.at/pingme"  class="hc-link"><img src="/uploads/slider/image2.jpg" alt="slide 2"></a></div><div class="hc-slide"><a href="https://chisel-beta.vercel.app/"  class="hc-link"><img src="/uploads/slider/image3.jpg" alt="slide 3"></a></div></div>
+
     <button class="hc-arrow hc-prev" aria-label="Previous">‹</button>
     <button class="hc-arrow hc-next" aria-label="Next">›</button>
-    <div class="hc-bullets"></div>
+    <div class="hc-bullets" aria-label="Carousel pagination"></div>
   </div>
 </div>
 
-<p>News, guides, routes, and much more! The site is constantly being update</p>
+
+<div class="not-prose space-y-8 mt-8">
+
+  <div class="card-glass prose prose-invert max-w-none">
+    <p><strong>TOPS Portal</strong> — news, guides, routes, and handy tools for players.</p>
+    <p>The site is useful for both newcomers and veterans: popular places and towns of the server, plus a guide to the ancient world of TOPS.</p>
+  </div>
+
+  <section>
+    <h3 class="mb-3 text-lg font-semibold">What’s inside</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="card-glass">
+        <div class="font-semibold">Guides</div>
+        <ul class="text-sm mt-2 list-disc list-inside space-y-1">
+          <li>Chisel, claims, transportation</li>
+          <li>Step-by-step how-tos and quick cheat sheets</li>
+        </ul>
+        <a class="cta inline-flex mt-3" href="/guide/">Browse guides →</a>
+      </div>
+
+      <div class="card-glass">
+        <div class="font-semibold">Towns & routes</div>
+        <ul class="text-sm mt-2 list-disc list-inside space-y-1">
+          <li>Settlement overviews</li>
+          <li>Ready-to-use navigation commands</li>
+        </ul>
+        <a class="cta inline-flex mt-3" href="/tourism/towns/">Open towns list →</a>
+      </div>
+
+      <div class="card-glass">
+        <div class="font-semibold">Mods</div>
+        <ul class="text-sm mt-2 list-disc list-inside space-y-1">
+          <li>Must-have picks</li>
+          <li>Install & updates</li>
+        </ul>
+        <a class="cta inline-flex mt-3" href="/mods/">Mods →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="mb-3 text-lg font-semibold">Install TLPath (recommended)</h3>
+    <div class="card-glass">
+      <p class="mb-3">The server map is huge and routes are often complex. The <strong>TLPath</strong> mod is recommended for navigation: it builds the shortest path from your coordinates, guides you point-to-point, and helps find Translocators. Without it, route-building commands from this site won’t work.</p>
+
+      <a href="https://mods.vintagestory.at/show/mod/27985" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-80" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a1 1 0 0 1 1 1v8.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4.007 4.007a1 1 0 0 1-1.414 0L7.28 11.707a1 1 0 1 1 1.414-1.414L11 12.586V4a1 1 0 0 1 1-1z"/><path d="M5 15a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-2a1 1 0 1 0-2 0v2a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-2z"/></svg>
+        <span class="font-medium">Download TLPath</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="mb-3 text-lg font-semibold">Quick start</h3>
+    <div class="card-glass">
+      <p class="mb-3">Paste this command in chat to build a route to <strong>Bronze City</strong>:</p>
+      <p class="text-sm mb-2"><strong>TLPath mod required.</strong></p>
+      <div class="block my-2">
+        <div class="flex items-center gap-2">
+          <code
+            class="tlcopy-code rounded-lg text-sm font-mono px-3 py-2"
+            style="background:#1f2937;color:#34d399;">.tlpath find -700 17028</code>
+      
+          <button
+            type="button"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-lg focus:outline-none"
+            style="background:#374151;"
+            title="Копировать" aria-label="Copy"
+            data-cmd=".tlpath find -700 17028"
+            onclick="(async(b)=>{try{await navigator.clipboard.writeText(b.dataset.cmd)}
+              catch(e){const t=document.createElement('textarea');t.value=b.dataset.cmd;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+              b.style.boxShadow='0 0 0 2px #34d399';setTimeout(()=>b.style.boxShadow='',900)})(this)">
+            <svg viewBox='0 0 24 24' class="h-5 w-5" style="color:#34d399" aria-hidden="true">
+              <path fill="currentColor"
+                d="M9 7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V7Zm-4 3a2 2 0 0 1 2-2h1v2H7v7h7v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8Z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <p class="text-sm opacity-80 mt-3">Tip: follow roads and wayposts — that’s often the fastest path.</p>
+      <p class="mt-3">Server map: <a href="https://map.tops.vintagestory.at/?x=-1&y=17&zoom=10" target="_blank" rel="noopener">map.tops.vintagestory.at</a></p>
+    </div>
+  </section>
+
+</div>
+
 
   </article>
 </section>

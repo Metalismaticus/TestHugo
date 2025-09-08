@@ -10,11 +10,22 @@ showReadingTime: false
 layoutBackgroundHeaderSpace: false
 ---
 
-<p>Cities founded by Russian-speaking players:</p>
+
 
 {{< raw >}}
-<div class="not-prose mt-6 space-y-8">
 
+<div class="not-prose space-y-6">
+
+  <!-- CTA: submit your place -->
+  <div class="card-glass flex items-center justify-between gap-4">
+    <p class="m-0">Want your place featured? You can submit it via the feedback form.</p>
+    <a href="/call_me/" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+      <span class="font-medium">Submit your place</span> →
+    </a>
+  </div>
+
+<div class="not-prose mt-6 space-y-8">
+<p>Cities founded by Russian-speaking players:</p>
   <section>
     <h3 class="mb-3 text-lg font-semibold">🏡 Active</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

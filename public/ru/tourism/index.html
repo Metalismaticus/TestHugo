@@ -52,15 +52,6 @@
             
           
           
-            <a href="/ru/events/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Ивенты</a>
-          
-        
-          
-          
-          
-            
-          
-          
             <a href="/ru/first_step/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Первые шаги</a>
           
         
@@ -80,6 +71,15 @@
           
           
             <a href="/ru/guide/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Гайды</a>
+          
+        
+          
+          
+          
+            
+          
+          
+            <a href="/ru/map/" class="text-base text-gray-900 hover:text-primary-600 font-medium transition">Карта</a>
           
         
           
@@ -154,12 +154,6 @@
           
             
           
-          <a href="/ru/events/" class="block py-2 text-base font-medium">Ивенты</a>
-        
-          
-          
-            
-          
           <a href="/ru/first_step/" class="block py-2 text-base font-medium">Первые шаги</a>
         
           
@@ -173,6 +167,12 @@
             
           
           <a href="/ru/guide/" class="block py-2 text-base font-medium">Гайды</a>
+        
+          
+          
+            
+          
+          <a href="/ru/map/" class="block py-2 text-base font-medium">Карта</a>
         
           
           
@@ -221,7 +221,103 @@ document.addEventListener('DOMContentLoaded', function () {
           
 <section class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl py-8">
   <article class="prose max-w-none">
-    <p>Заглушка</p>
+    <h2 id="топ-интересных-мест">Топ интересных мест</h2>
+
+<div class="not-prose space-y-6">
+
+  <!-- CTA: добавить своё место -->
+  <div class="card-glass flex items-center justify-between gap-4">
+    <p class="m-0">Хотите, чтобы ваше место попало в список? Вы всегда можете предложить объект через форму обратной связи.</p>
+    <a href="/ru/call_me/" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+      <span class="font-medium">Добавить своё место</span> →
+    </a>
+  </div>
+
+  <!-- Место 1 -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="card-glass">
+      <h3 class="text-lg font-semibold m-0">🏛️ Храм Евангелиона</h3>
+      <p class="mt-2 mb-3 opacity-90">Находится прямо у спавна, помолился за вайпофинал Евангелиона — и в путь! Найти легко, есть дороги и указатели, рядом большой хаб из ТЛ.</p>
+
+      <div class="space-y-2">
+        <div class="text-sm opacity-80">Навигация (нужен мод TLPath):</div>
+        <div class="block my-2">
+          <div class="flex items-center gap-2">
+            <code
+              class="tlcopy-code rounded-lg text-sm font-mono px-3 py-2"
+              style="background:#1f2937;color:#34d399;">.tlpath find 524 437</code>
+        
+            <button
+              type="button"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-lg focus:outline-none"
+              style="background:#374151;"
+              title="Копировать" aria-label="Copy"
+              data-cmd=".tlpath find 524 437"
+              onclick="(async(b)=>{try{await navigator.clipboard.writeText(b.dataset.cmd)}
+                catch(e){const t=document.createElement('textarea');t.value=b.dataset.cmd;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+                b.style.boxShadow='0 0 0 2px #34d399';setTimeout(()=>b.style.boxShadow='',900)})(this)">
+              <svg viewBox='0 0 24 24' class="h-5 w-5" style="color:#34d399" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M9 7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V7Zm-4 3a2 2 0 0 1 2-2h1v2H7v7h7v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-sm opacity-80 pt-2">Маркер на карту:</div>
+        <div class="block my-2">
+          <div class="flex items-center gap-2">
+            <code
+              class="tlcopy-code rounded-lg text-sm font-mono px-3 py-2"
+              style="background:#1f2937;color:#34d399;">/waypoint addati gear 524 110 437 false #FF0000 Храм Евангелиона</code>
+        
+            <button
+              type="button"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-lg focus:outline-none"
+              style="background:#374151;"
+              title="Копировать" aria-label="Copy"
+              data-cmd="/waypoint addati gear 524 110 437 false #FF0000 Храм Евангелиона"
+              onclick="(async(b)=>{try{await navigator.clipboard.writeText(b.dataset.cmd)}
+                catch(e){const t=document.createElement('textarea');t.value=b.dataset.cmd;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+                b.style.boxShadow='0 0 0 2px #34d399';setTimeout(()=>b.style.boxShadow='',900)})(this)">
+              <svg viewBox='0 0 24 24' class="h-5 w-5" style="color:#34d399" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M9 7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V7Zm-4 3a2 2 0 0 1 2-2h1v2H7v7h7v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="/ru/tourism/evangelion/" class="cta inline-flex mt-4">Подробнее о храме →</a>
+    </div>
+
+    <div class="card-glass p-0">
+      <link rel="stylesheet" href="/css/carousel.css">
+  <script defer src="/js/carousel.js"></script><div class="hc-slider w-full max-w-5xl mx-auto rounded-xl" data-items="1" data-duration="6000">
+  <div class="hc-viewport" style="height: 300px;">
+    <div class="hc-track"><div class="hc-slide">
+      <img src="/uploads/evangelion/1.png" alt="Храм Евангелиона — вид 1">
+      </div><div class="hc-slide">
+      <img src="/uploads/evangelion/2.png" alt="Храм Евангелиона — вид 2">
+      </div><div class="hc-slide">
+      <img src="/uploads/evangelion/3.png" alt="Храм Евангелиона — вид 3">
+      </div><div class="hc-slide">
+      <img src="/uploads/evangelion/4.png" alt="Храм Евангелиона — вид 4">
+      </div></div>
+
+    <button class="hc-arrow hc-prev" aria-label="Previous">‹</button>
+    <button class="hc-arrow hc-next" aria-label="Next">›</button>
+    <div class="hc-bullets" aria-label="Carousel pagination"></div>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+</div>
+
 
   </article>
 </section>
