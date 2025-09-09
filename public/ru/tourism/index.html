@@ -317,6 +317,108 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
   </section>
 
+<!-- Place 2 -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="card-glass">
+      <h3 class="text-lg font-semibold m-0">🔨 Перекрёстная кузница Дзэн — публичная высокоскоростная кузница</h3>
+      <p class="mt-2 mb-3 opacity-90">Расположена на перекрёстке между Мидхейвеном и Джестауном. Здесь есть измельчитель и дробилка со скоростью ×25, а также два молота-кузнеца ×10, всё это работает от 64 ветряков. Кузница встроена в естественную пещеру светящихся червей, создавая атмосферное место для ковки.</p>
+
+      <div class="space-y-2">
+        <div class="text-sm opacity-80">Навигация (нужен TLPath):</div>
+        <div class="block my-2">
+          <div class="flex items-center gap-2">
+            <code
+              class="tlcopy-code rounded-lg text-sm font-mono px-3 py-2"
+              style="background:#1f2937;color:#34d399;">.tlpath find -2276 10037</code>
+        
+            <button
+              type="button"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-lg focus:outline-none"
+              style="background:#374151;"
+              title="Копировать" aria-label="Copy"
+              data-cmd=".tlpath find -2276 10037"
+              onclick="(async(b)=>{try{await navigator.clipboard.writeText(b.dataset.cmd)}
+                catch(e){const t=document.createElement('textarea');t.value=b.dataset.cmd;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+                b.style.boxShadow='0 0 0 2px #34d399';setTimeout(()=>b.style.boxShadow='',900)})(this)">
+              <svg viewBox='0 0 24 24' class="h-5 w-5" style="color:#34d399" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M9 7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V7Zm-4 3a2 2 0 0 1 2-2h1v2H7v7h7v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-sm opacity-80 pt-2">Маркер на карту:</div>
+        <div class="block my-2">
+          <div class="flex items-center gap-2">
+            <code
+              class="tlcopy-code rounded-lg text-sm font-mono px-3 py-2"
+              style="background:#1f2937;color:#34d399;">/waypoint addati spiral -170 110 862 false purple TL to -5475, 7136</code>
+        
+            <button
+              type="button"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-lg focus:outline-none"
+              style="background:#374151;"
+              title="Копировать" aria-label="Copy"
+              data-cmd="/waypoint addati spiral -170 110 862 false purple TL to -5475, 7136"
+              onclick="(async(b)=>{try{await navigator.clipboard.writeText(b.dataset.cmd)}
+                catch(e){const t=document.createElement('textarea');t.value=b.dataset.cmd;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+                b.style.boxShadow='0 0 0 2px #34d399';setTimeout(()=>b.style.boxShadow='',900)})(this)">
+              <svg viewBox='0 0 24 24' class="h-5 w-5" style="color:#34d399" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M9 7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V7Zm-4 3a2 2 0 0 1 2-2h1v2H7v7h7v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="block my-2">
+          <div class="flex items-center gap-2">
+            <code
+              class="tlcopy-code rounded-lg text-sm font-mono px-3 py-2"
+              style="background:#1f2937;color:#34d399;">/waypoint addati spiral -5747 110 6535 false purple TL to -2328, 10086</code>
+        
+            <button
+              type="button"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-lg focus:outline-none"
+              style="background:#374151;"
+              title="Копировать" aria-label="Copy"
+              data-cmd="/waypoint addati spiral -5747 110 6535 false purple TL to -2328, 10086"
+              onclick="(async(b)=>{try{await navigator.clipboard.writeText(b.dataset.cmd)}
+                catch(e){const t=document.createElement('textarea');t.value=b.dataset.cmd;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+                b.style.boxShadow='0 0 0 2px #34d399';setTimeout(()=>b.style.boxShadow='',900)})(this)">
+              <svg viewBox='0 0 24 24' class="h-5 w-5" style="color:#34d399" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M9 7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V7Zm-4 3a2 2 0 0 1 2-2h1v2H7v7h7v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card-glass p-0">
+      <div class="hc-slider w-full max-w-5xl mx-auto rounded-xl" data-items="1" data-duration="6000">
+  <div class="hc-viewport" style="height: 300px;">
+    <div class="hc-track"><div class="hc-slide">
+      <img src="/uploads/temporalwolf/1.jpeg" alt="Публичная кузница — вид 1">
+      </div><div class="hc-slide">
+      <img src="/uploads/temporalwolf/2.jpeg" alt="Публичная кузница — вид 2">
+      </div><div class="hc-slide">
+      <img src="/uploads/temporalwolf/3.jpeg" alt="Публичная кузница — вид 3">
+      </div></div>
+
+    <button class="hc-arrow hc-prev" aria-label="Previous">‹</button>
+    <button class="hc-arrow hc-next" aria-label="Next">›</button>
+    <div class="hc-bullets" aria-label="Carousel pagination"></div>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+
 </div>
 
 

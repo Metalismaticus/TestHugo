@@ -68,5 +68,17 @@ title: "TOPS Server Fan Portal"
     </div>
   </section>
 
+<section>
+  <h3 class="mb-3 text-lg font-semibold">Contact</h3>
+  <div class="card-glass p-6 space-y-4 text-center">
+    <p class="opacity-90">
+      Got server news, an interesting place, or want to add your city here? Write to me.
+    </p>
+    <a href="/ru/call_me/" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/5 ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+      <span class="font-medium">✉️ Contact me</span>
+    </a>
+  </div>
+</section>
+
 </div>
 {{< /raw >}}
