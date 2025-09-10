@@ -70,5 +70,27 @@ title: "Tourism"
     </div>
   </section>
 
+<!-- Place 3 -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="card-glass">
+      <h3 class="text-lg font-semibold m-0">👾 Legendary Dave</h3>
+      <p class="mt-2 mb-3 opacity-90">Have you ever seen a terrifying figure on the horizon striding straight toward you? We found its home! It’s a life-size statue created by Serglittle — a truly unforgettable sight.</p>
+
+      <div class="space-y-2">
+        <div class="text-sm opacity-80">Navigation (TLPath required):</div>
+        {{< tlcopy cmd=".tlpath find -22400 37100" >}}
+      </div>
+    </div>
+
+    <div class="card-glass p-0">
+      {{< carousel items="1" height="300" unit="px" duration="6000" >}}
+      <img src="/uploads/Serglittle/1.jpg" alt="Dave — view 1">
+      <hr>
+      <img src="/uploads/Serglittle/2.jpg" alt="Dave — view 2">
+      {{< /carousel >}}
+    </div>
+  </section>
+
+
 </div>
 {{< /raw >}}
