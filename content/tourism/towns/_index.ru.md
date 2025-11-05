@@ -24,21 +24,35 @@ layoutBackgroundHeaderSpace: false
 
 <div class="not-prose mt-6 space-y-8">
 <p>Города основанные русскоязычными игроками:</p>
-  <section>
-    <h3 class="mb-3 text-lg font-semibold">🏡 Живые</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <a href="/ru/tourism/towns/bronze-city/" class="card-glass">
-        <div class="flex items-start gap-3">
-          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white">🏡</span>
-          <div>
-            <div class="font-semibold">Бронзовый город</div>
-            <p class="text-sm mt-1 opacity-80">Статус: живой</p>
-            <span class="mt-2 inline-flex cta text-sm">Перейти →</span>
-          </div>
+<section>
+  <h3 class="mb-3 text-lg font-semibold">🏡 Живые</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+    <a href="/ru/tourism/towns/bronze-city/" class="card-glass">
+      <div class="flex items-start gap-3">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white">🏡</span>
+        <div>
+          <div class="font-semibold">Бронзовый город</div>
+          <p class="text-sm mt-1 opacity-80">Статус: живой</p>
+          <span class="mt-2 inline-flex cta text-sm">Перейти →</span>
         </div>
-      </a>
-    </div>
-  </section>
+      </div>
+    </a>
+
+    <a href="/ru/tourism/towns/commune-utzee/" class="card-glass">
+      <div class="flex items-start gap-3">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white">🏡</span>
+        <div>
+          <div class="font-semibold">Коммуна Утзи</div>
+          <p class="text-sm mt-1 opacity-80">Статус: живой</p>
+          <span class="mt-2 inline-flex cta text-sm">Перейти →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
 
   <section>
     <h3 class="mb-3 text-lg font-semibold">❓ Статус неизвестен</h3>
