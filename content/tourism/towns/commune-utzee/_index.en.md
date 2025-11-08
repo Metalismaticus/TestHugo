@@ -68,6 +68,6 @@ Direct teleport to Emerald Port is also available.</p>
 
 
 ---
-{{< topsmap x="3791" y="23896" zoom="5" >}}
+{{< topsmap x="3791" y="-23896" zoom="5" >}}
 
 {{< tlcopy x="3791" y="23896" >}} - Command to paste into the TLPath mod
