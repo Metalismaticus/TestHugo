@@ -67,6 +67,6 @@ layoutBackgroundHeaderSpace: false
 
 ---
 
-{{< topsmap x="3791" y="23896" zoom="5" >}}
+{{< topsmap x="3791" y="-23896" zoom="5" >}}
 
 {{< tlcopy x="3791" y="23896" >}} - команда для копирования в мод TLPath
